@@ -69,7 +69,7 @@ type Proxy struct {
 	RemoteDnsResolve    bool                  `yaml:"remote-dns-resolve,omitempty"`
 	Dns                 []string              `yaml:"dns,omitempty"`
 	PublicKey           string                `yaml:"public-key,omitempty"`
-	AllowedIps          []string              `yaml:"allowed-ips,omitempty"`
+	AllowedIps          string              `yaml:"allowed-ips,omitempty"`
 }
 
 type WireGuardPeerOption struct {
@@ -78,7 +78,7 @@ type WireGuardPeerOption struct {
 	PublicKey    string   `yaml:"public-key,omitempty"`
 	PreSharedKey string   `yaml:"pre-shared-key,omitempty"`
 	Reserved     []uint8  `yaml:"reserved,omitempty"`
-	AllowedIPs   []string `yaml:"allowed-ips,omitempty"`
+	AllowedIPs   string `yaml:"allowed-ips,omitempty"`
 }
 
 type _Proxy Proxy
